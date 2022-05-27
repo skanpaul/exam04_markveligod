@@ -29,11 +29,11 @@ Write a program that will behave like executing a shell command
 4) You must implement ";" like in bash
 
 5) Your program must implement the built-in command cd only with a path as argument (no '-' or without parameters)
-	5.1) if cd has the wrong number of argument your program
+	5.1-M) if cd has the wrong number of argument your program
 			- should print in STDERR
 			- "error: cd: bad arguments" followed by a '\n'
 
-	5.2) if cd failed your program should
+	5.2-M) if cd failed your program should
 			- print in STDERR 
 			- "error: cd: cannot change directory to path_to_change" 
 			- followed by a '\n' with path_to_change replaced by the argument to cd
@@ -44,12 +44,12 @@ Write a program that will behave like executing a shell command
 
 7) You don't need to manage environment variables ($BLA ...)
 
-8) If a system call, except execve and chdir, returns an error your program should
+8-M) If a system call, except execve and chdir, returns an error your program should
 	- immediatly print "error: fatal" in STDERR 
 	- followed by a '\n' 
 	- and the program should exit
 
-9) If execve failed you should
+9-M) If execve failed you should
 	- print "error: cannot execute executable_that_failed" 
 	- in STDERR followed by a '\n' 
 	- with executable_that_failed replaced with the path of the failed executable 
